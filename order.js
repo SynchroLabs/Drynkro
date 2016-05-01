@@ -77,45 +77,45 @@ exports.View =
     title: "Drynk Order",
     elements: 
     [
-        { control: "stackpanel", width: "480", contents: [
+        { control: "stackpanel", width: "465", contents: [
 
             { control: "text", value: "{title}", font: { size: 14, bold: true }, horizontalAlignment: "Center" },
-            { control: "text", value: "Order exires in {secondsToStartPour} seconds", horizontalAlignment: "Center", visibility: "eval({state} == 'pending')" },
+            { control: "text", value: "Order expires in {secondsToStartPour} seconds", horizontalAlignment: "Center", visibility: "eval({state} == 'pending')" },
 
             { control: "stackpanel", orientation: "Horizontal", contents: [
-                { control: "text", value: "Your Name", fontsize: 10, width: 150, verticalAlignment: "Center" },
-                { control: "edit", placeholder: "enter your name", binding: "username", width: 300, verticalAlignment: "Center" },
-            ] },
-
-            { control: "stackpanel", orientation: "Horizontal", contents: [
-                { control: "text", value: "Your Drink", fontsize: 10, width: 150, verticalAlignment: "Center" },
-                { control: "picker", width: 300, margin: { bottom: 10 }, binding: { items: "drinkList", itemContent: "{name}", selection: "selectedDrink", selectionItem: "$data" } },
+                { control: "text", style: "col1Style", value: "Your Name", fontsize: 10, verticalAlignment: "Center" },
+                { control: "edit", style: "col2Style", placeholder: "enter your name", binding: "username", verticalAlignment: "Center" },
             ] },
 
             { control: "stackpanel", orientation: "Horizontal", contents: [
-                { control: "text", value: "{liquor}", fontsize: 10, width: 150, verticalAlignment: "Center" },
-                { control: "slider", minimum: 0, maximum: 2, binding: "customRecipe[0]", width: 300, verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
-                { control: "progressbar", minimum: 0, maximum: 2, value: "{selectedDrink.recipe[0]}", width: 300, verticalAlignment: "Center", visibility: "{!selectedDrink.custom}" },
-            ] },
-            { control: "stackpanel", orientation: "Horizontal", contents: [
-                { control: "text", value: "Cranberry", fontsize: 10, width: 150, verticalAlignment: "Center" },
-                { control: "slider", minimum: 0, maximum: 6, binding: "customRecipe[1]", width: 300, verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
-                { control: "progressbar", minimum: 0, maximum: 6, value: "{selectedDrink.recipe[1]}", width: 300, verticalAlignment: "Center", visibility: "{!selectedDrink.custom}" },
-            ] },
-            { control: "stackpanel", orientation: "Horizontal", contents: [
-                { control: "text", value: "Sour Mix", fontsize: 10, width: 150, verticalAlignment: "Center" },
-                { control: "slider", minimum: 0, maximum: 6, binding: "customRecipe[2]", width: 300, verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
-                { control: "progressbar", minimum: 0, maximum: 6, value: "{selectedDrink.recipe[2]}", width: 300, verticalAlignment: "Center", visibility: "{!selectedDrink.custom}" },
-            ] },
-            { control: "stackpanel", orientation: "Horizontal", contents: [
-                { control: "text", value: "Orange", fontsize: 10, width: 150, verticalAlignment: "Center"},
-                { control: "slider", minimum: 0, maximum: 6, binding: "customRecipe[3]", width: 300, verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
-                { control: "progressbar", minimum: 0, maximum: 6, value: "{selectedDrink.recipe[3]}", width: 300, verticalAlignment: "Center", visibility: "{!selectedDrink.custom}" },
+                { control: "text", style: "col1Style", value: "Your Drink", fontsize: 10, verticalAlignment: "Center" },
+                { control: "picker", style: "col2Style", margin: { bottom: 10 }, binding: { items: "drinkList", itemContent: "{name}", selection: "selectedDrink", selectionItem: "$data" } },
             ] },
 
             { control: "stackpanel", orientation: "Horizontal", contents: [
-                { control: "text", value: "Nickname", fontsize: 10, width: 150, verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
-                { control: "edit", binding: "customDrinkName", width: 300, verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
+                { control: "text", style: "col1Style", value: "{liquor}", fontsize: 10, verticalAlignment: "Center" },
+                { control: "slider", style: "col2Style", minimum: 0, maximum: 2, binding: "customRecipe[0]", verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
+                { control: "progressbar", style: "col2Style", minimum: 0, maximum: 2, value: "{selectedDrink.recipe[0]}", verticalAlignment: "Center", visibility: "{!selectedDrink.custom}" },
+            ] },
+            { control: "stackpanel", orientation: "Horizontal", contents: [
+                { control: "text", style: "col1Style", value: "Cranberry", fontsize: 10, verticalAlignment: "Center" },
+                { control: "slider", style: "col2Style", minimum: 0, maximum: 6, binding: "customRecipe[1]", verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
+                { control: "progressbar", style: "col2Style", minimum: 0, maximum: 6, value: "{selectedDrink.recipe[1]}", verticalAlignment: "Center", visibility: "{!selectedDrink.custom}" },
+            ] },
+            { control: "stackpanel", orientation: "Horizontal", contents: [
+                { control: "text", style: "col1Style", value: "Sour Mix", fontsize: 10, verticalAlignment: "Center" },
+                { control: "slider", style: "col2Style", minimum: 0, maximum: 6, binding: "customRecipe[2]", verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
+                { control: "progressbar", style: "col2Style", minimum: 0, maximum: 6, value: "{selectedDrink.recipe[2]}", verticalAlignment: "Center", visibility: "{!selectedDrink.custom}" },
+            ] },
+            { control: "stackpanel", orientation: "Horizontal", contents: [
+                { control: "text", style: "col1Style", value: "Orange", fontsize: 10, verticalAlignment: "Center"},
+                { control: "slider", style: "col2Style", minimum: 0, maximum: 6, binding: "customRecipe[3]", verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
+                { control: "progressbar", style: "col2Style", minimum: 0, maximum: 6, value: "{selectedDrink.recipe[3]}", verticalAlignment: "Center", visibility: "{!selectedDrink.custom}" },
+            ] },
+
+            { control: "stackpanel", orientation: "Horizontal", contents: [
+                { control: "text", style: "col1Style", value: "Nickname", fontsize: 10, verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
+                { control: "edit", style: "col2Style", binding: "customDrinkName", verticalAlignment: "Center", visibility: "{selectedDrink.custom}" },
             ] },
 
             { control: "stackpanel", orientation: "Vertical", width: "*", contents: [
@@ -162,6 +162,8 @@ exports.InitializeViewModel = function (context, session, params)
 
     var viewModel =
     {
+        col1Style: { width: 150 },
+        col2Style: { width: 295, margin: {right: 0} },
         liquor: liquor,
         drinkList: recipes[liquor],
         selectedDrink: recipes[liquor][0],
@@ -254,7 +256,7 @@ exports.Commands =
         var drinkQueue = DrinkQueue.getDrinkQueue();
         var sessionId = Synchro.getSessionId(context);
         var drinkOrder = getDrinkOrder(viewModel);
-        
+
         drinkQueue.setDrinkOrder(sessionId, drinkOrder);
         viewModel.orderInQueue = true;
 
