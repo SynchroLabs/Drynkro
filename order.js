@@ -120,12 +120,13 @@ exports.View =
 
             { control: "stackpanel", orientation: "Vertical", width: "*", contents: [
                 { control: "stackpanel", orientation: "Horizontal", horizontalAlignment: "Center", contents: [
-                    { control: "button", caption: "{buttonCap}", binding: "order", visibility: "eval({state} == 'ordering')" },
-                    { control: "button", caption: "Start Pouring", binding: "startPouring", visibility: "eval({state} == 'pending')" },
-                    { control: "button", caption: "Cancel Order", binding: "cancelDrink", visibility: "eval({orderInQueue} && ({state} != 'pouring'))" }, // Also need cancel order in "ordering" if drink in queue
-                    { control: "button", caption: "Stop Pouring", binding: "stopPouring", visibility: "eval({state} == 'pouring')" },
+                    { control: "button", caption: "{buttonCap}", icon: "local_drink", binding: "order", visibility: "eval({state} == 'ordering')" },
+                    { control: "button", caption: "Start Pouring", icon: "play_arrow", binding: "startPouring", visibility: "eval({state} == 'pending')" },
+                    { control: "button", caption: "Cancel Order", icon: "clear", binding: "cancelDrink", visibility: "eval({orderInQueue} && ({state} != 'pouring'))" }, // Also need cancel order in "ordering" if drink in queue
+                    { control: "button", caption: "Stop Pouring", icon: "stop", binding: "stopPouring", visibility: "eval({state} == 'pouring')" },
                 ] },
             ] },
+
         ] }
     ]
 }

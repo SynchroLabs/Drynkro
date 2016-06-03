@@ -15,8 +15,8 @@ exports.View =
 
             { control: "stackpanel", orientation: "Vertical", width: 480, contents: [
                 { control: "stackpanel", orientation: "Horizontal", horizontalAlignment: "Center", contents: [
-                    { control: "button", caption: "{buttonCap}", binding: "order" },
-                    { control: "button", caption: "Cancel Order", binding: "cancelOrder", visibility: "{position}" },
+                    { control: "button", caption: "{buttonCap}", icon: "local_drink", binding: "order" },
+                    { control: "button", caption: "Cancel Order", icon: "clear", binding: "cancelOrder", visibility: "{position}" },
                 ] },
             ] },
 
@@ -99,4 +99,15 @@ exports.Commands =
         drinkQueue.removeDrinkOrder(sessionId);
         updateViewModel(viewModel, drinkQueue, sessionId);
     },
+}
+
+
+exports.OnBack = function(context, session, viewModel)
+{
+    // Stop listening before navigating away...
+    var drinkQueue = DrinkQueue.getDrinkQueue();
+    var sessionId = Synchro.getSessionId(context);
+    drinkQueue.clearStatusListener(sessionId);
+
+    return false; // Nav not handled
 }
