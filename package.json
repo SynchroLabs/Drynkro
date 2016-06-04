@@ -1,11 +1,11 @@
 {
   "name": "drynkro",
-  "version": "1.3.5",
+  "version": "1.4.0",
   "description": "Synchro Drynkro",
   "main": "main",
   "author": "Bob Dickinson <bob@synchro.io> (http://synchro.io/)",
   "private": true,
-  "engines": { "synchro": ">= 1.3.5" },
-  "synchro": { "clientVersion": ">=1.3.0" },
+  "engines": { "synchro": ">= 1.4.0" },
+  "synchro": { "clientVersion": ">= 1.4.0" },
   "synchroArchiveUrl": "https://github.com/SynchroLabs/Drynkro/archive/master.zip"
 }
