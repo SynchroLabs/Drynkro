@@ -150,7 +150,7 @@ function endPourWithMessage(context, viewModel, title, message)
     viewModel.title = title;
     var messageBox = 
     {
-        title: "Drynkro",
+        title: "Drinkro",
         message: message,
         options: [ { label: "Ok", command: "endPour" } ]
     }

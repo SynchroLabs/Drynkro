@@ -1,8 +1,8 @@
-# Drynkro - Synchro Drink Robot app
+# Drinkro - Synchro Drink Robot app
 
 This app is intended to be installed into a [Synchro Server](https://synchro.io) environment using the [Synchro Command Line Interface](https://www.npmjs.com/package/synchro) tool.  
 
-## Installing Synchro Drynkro
+## Installing Synchro Drinkro
 
 To install in your Synchro Server environment using the Synchro CLI:
 ```
@@ -15,7 +15,7 @@ Alternatively, you may use Git to install this app and keep it up to date.  To d
 $ synchro add Drynkro drynkro
 ```
 
-## Configuring Synchro Drynkro
+## Configuring Synchro Drinkro
 
 Before running Synchro Server with this app, you should provide the app configuration setting `LIQUOR`, which may contain one of: Vodka, Rum, Tequila.  If not provided, Vodka will be used. 
 
@@ -33,7 +33,7 @@ The easiest way to set this value is to add it to the Synchro Server `config.jso
 }
 ```
 
-## Updating Synchro Drynkro
+## Updating Synchro Drinkro
 
 If you installed this app using `synchro install`, then you may update it (getting the most recent version) at any time by doing:
 
