@@ -1,11 +1,11 @@
-// Drynkro main page
+// Drinkro main page
 //
 var imgCloud = Synchro.getResourceUrl("cocktail.png");
 var DrinkQueue = require('./lib/drink-queue');
 
 exports.View =
 {
-    title: "Drynkro",
+    title: "Drinkro",
     elements: 
     [
         { control: "stackpanel", width: "480", height: "*", contents: [
